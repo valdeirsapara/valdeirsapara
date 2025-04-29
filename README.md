@@ -1,3 +1,3 @@
 # Hey! I'm Valdeir
 
-https://valdeirsapara.github.io/
+https://valdeirsapara.site/
