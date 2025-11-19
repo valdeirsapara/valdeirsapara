@@ -29,7 +29,9 @@ export default function RootLayout({
         className={`${figtree.variable} ${alexandria.variable} antialiased`}
       >
         <NavBar />
+        <main id="content" tabIndex={-1} className="relative">
         {children}
+        </main>
       </body>
     </html>
   );

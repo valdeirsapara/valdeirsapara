@@ -5,10 +5,15 @@ export default function NavBar() {
     const contactUrl = siteConfig.general.contact_url;
     
     return (
-        <nav className="m-[var(--margin)] mt-[20px] flex justify-between items-center">
+        <nav className="mx-[var(--margin)] my-[20px] flex justify-between items-center relative">
             <Link href="/" className="duration-300 cursor-pointer">
                 <span className="text-md font-semibold font-mono">Valdeir Sapará</span>
             </Link>
+                <a href="#content" className=" left-0 top-8 text-sm font-sans sr-only focus:not-sr-only
+                 focus:bg-white focus:text-black focus:absolute focus:p-[2px] focus:z-50"
+                >
+                    Ir para conteúdo principal
+                </a>
             <ul className="flex justify-between items-center gap-8 font-sans">
                 <li className="hover:text-foreground duration-300 border-b-2 border-transparent
                 hover:border-foreground transition-colors duration-300">
@@ -25,9 +30,9 @@ export default function NavBar() {
             </ul>
 
             <Link href={contactUrl}>
-                <button className="border-2 border-foreground rounded-xl px-8 py-2 cursor-pointer hover:border-[#008000]
-                transition-colors duration-300 group">
-                    <span className="font-mono group-hover:text-[#008000] transition-colors duration-300">fale conosco</span>
+                <button className="border-2 border-foreground rounded-xl px-8 py-2 cursor-pointer hover:border-[#3A9DC2]
+                transition-colors duration-300 group flex item-center">
+                    <span className="font-mono group-hover:text-[#3A9DC2] transition-colors duration-300 ml-2">fale conosco</span>
                 </button>
             </Link>
         </nav>
