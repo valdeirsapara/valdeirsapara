@@ -17,15 +17,15 @@ export default function NavBar() {
             <ul className="flex justify-between items-center gap-8 font-sans">
                 <li className="hover:text-foreground duration-300 border-b-2 border-transparent
                 hover:border-foreground transition-colors duration-300">
-                    <Link href="/">Web design</Link>
+                    <Link href="/web-design">Design Web</Link>
                 </li>
                     <li className="hover:text-foreground duration-300 border-b-2 border-transparent
                 hover:border-foreground transition-colors duration-300">
-                    <Link href="/about">About</Link>
+                    <Link href="/web-development">Desenvolvimento Web</Link>
                 </li>
                 <li className="hover:text-foreground duration-300 border-b-2 border-transparent
                 hover:border-foreground transition-colors duration-300">
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/cases">Casos de Sucesso</Link>
                 </li>
             </ul>
 
