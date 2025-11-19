@@ -17,7 +17,7 @@ export default function NavBar() {
             <ul className="flex justify-between items-center gap-8 font-sans">
                 <li className="hover:text-foreground duration-300 border-b-2 border-transparent
                 hover:border-foreground transition-colors duration-300">
-                    <Link href="/">Home</Link>
+                    <Link href="/">Web design</Link>
                 </li>
                     <li className="hover:text-foreground duration-300 border-b-2 border-transparent
                 hover:border-foreground transition-colors duration-300">

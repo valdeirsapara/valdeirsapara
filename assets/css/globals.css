@@ -22,6 +22,6 @@ body {
 }
 
 .container-lg {
-  width: 100%;
+  max-width: 720px;
   min-height: 100dvh;
 }

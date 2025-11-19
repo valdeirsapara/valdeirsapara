@@ -26,40 +26,33 @@
     color: var(--color-blue);
     animation: wordReveal 0.3s ease-out forwards,
                 blueToWhite 1.5s ease-in-out forwards;
-    /* Delay maior para a animação de cor começar após a palavra aparecer completamente */
-    animation-delay: 0.3s, 0.9s;
+    /* Delay para animação de cor: delay da palavra + 0.5s para começar após aparecer */
+    --color-animation-delay: calc(var(--word-delay, 0s) + 0.5s);
+    animation-delay: var(--word-delay, 0s), var(--color-animation-delay);
 }
 
+/* 
+ * Sistema dinâmico de animação de palavras
+ * 
+ * Como usar:
+ * 1. Adicione a classe "word-reveal" em cada span/palavra
+ * 2. Defina --word-index no style inline: style={{ '--word-index': index }}
+ * 3. O delay será calculado automaticamente: 0.1s + (índice * 0.15s)
+ * 
+ * Personalizar:
+ * - Para delay customizado: style={{ '--word-delay': '0.5s' }}
+ * - Para animação azul→branco: adicione classe "blue-to-white"
+ */
 .word-reveal {
     display: inline-block;
     opacity: 0;
     transform: translateY(20px);
     animation: wordReveal 0.3s ease-out forwards;
-}
-
-/* Aplica delay progressivo para cada palavra - contando a partir do primeiro span filho do h2 */
-.hero-title-wrapper h2 .word-reveal:nth-of-type(1) {
-    animation-delay: 0.1s;
-}
-
-.hero-title-wrapper h2 .word-reveal:nth-of-type(2) {
-    animation-delay: 0.25s;
-}
-
-.hero-title-wrapper h2 .word-reveal:nth-of-type(3) {
-    animation-delay: 0.4s;
-}
-
-.hero-title-wrapper h2 .word-reveal:nth-of-type(4) {
-    animation-delay: 0.55s;
-}
-
-.hero-title-wrapper h2 .word-reveal:nth-of-type(5) {
-    animation-delay: 0.7s;
-}
-
-.hero-title-wrapper h2 .word-reveal:nth-of-type(6) {
-    animation-delay: 0.85s;
+    /* Sistema dinâmico: calcula delay automaticamente baseado no índice */
+    /* Fórmula: delay inicial 0.1s + (índice * 0.15s) */
+    /* Pode ser sobrescrito definindo --word-delay diretamente */
+    --word-delay: calc(0.1s + (var(--word-index, 0) * 0.15s));
+    animation-delay: var(--word-delay, 0s);
 }
 
 /* Respeita preferência de movimento reduzido */
