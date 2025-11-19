@@ -1,0 +1,76 @@
+@keyframes wordReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blueToWhite {
+    0% {
+        color: var(--color-blue);
+    }
+    90% {
+        color: var(--foreground);
+    }
+    100% {
+        color: var(--foreground);
+    }
+}
+
+/* A palavra com blue-to-white começa azul e depois muda suavemente para a cor foreground */
+.hero-title-wrapper h2 .word-reveal.blue-to-white {
+    color: var(--color-blue);
+    animation: wordReveal 0.3s ease-out forwards,
+                blueToWhite 1.5s ease-in-out forwards;
+    /* Delay maior para a animação de cor começar após a palavra aparecer completamente */
+    animation-delay: 0.3s, 0.9s;
+}
+
+.word-reveal {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: wordReveal 0.3s ease-out forwards;
+}
+
+/* Aplica delay progressivo para cada palavra - contando a partir do primeiro span filho do h2 */
+.hero-title-wrapper h2 .word-reveal:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.hero-title-wrapper h2 .word-reveal:nth-of-type(2) {
+    animation-delay: 0.25s;
+}
+
+.hero-title-wrapper h2 .word-reveal:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.hero-title-wrapper h2 .word-reveal:nth-of-type(4) {
+    animation-delay: 0.55s;
+}
+
+.hero-title-wrapper h2 .word-reveal:nth-of-type(5) {
+    animation-delay: 0.7s;
+}
+
+.hero-title-wrapper h2 .word-reveal:nth-of-type(6) {
+    animation-delay: 0.85s;
+}
+
+/* Respeita preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    .hero-title-wrapper h2 .word-reveal {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+    .hero-title-wrapper h2 .word-reveal.blue-to-white {
+        animation: none !important;
+        color: var(--color-blue) !important;
+    }
+}

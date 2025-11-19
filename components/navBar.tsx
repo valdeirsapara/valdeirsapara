@@ -5,7 +5,7 @@ export default function NavBar() {
     const contactUrl = siteConfig.general.contact_url;
     
     return (
-        <nav className="save-paddings flex justify-between items-center relative">
+        <nav className="save-paddings  absolute top-0 left-0 w-full flex justify-between items-center ">
             <Link href="/" className="duration-300 cursor-pointer">
                 <span className="text-md font-semibold font-mono">Valdeir Sapará</span>
             </Link>
