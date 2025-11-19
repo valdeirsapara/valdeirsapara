@@ -17,7 +17,7 @@ export default function Title() {
     return (
         <div className="hero-title-wrapper">
             <h2
-                className="text-4xl  font-mono flex flex-wrap"
+                className="text-xl md:text-4xl  font-mono flex flex-wrap"
                 tabIndex={0}
             >
                 {words.map((word, index) => (

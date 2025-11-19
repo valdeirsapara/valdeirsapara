@@ -11,3 +11,9 @@
       --foreground: #ededed;
     }
   }
+
+  @meida (max-width: 1000px) {
+    :root {
+      --margin: 20px;
+    }
+  }

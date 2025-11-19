@@ -19,7 +19,7 @@ export default function Canvas() {
     });
     return (
         <div 
-            className="w-full h-full min-h-[720px] max-w-[1200px] flex items-center justify-center relative rounded-lg overflow-hidden"
+            className="w-full h-full min-h-[200px] max-w-full md:min-h-[720px] md:max-w-[1200px] flex items-center justify-center relative rounded-lg overflow-hidden"
         >
             {RiveComponent ? (
                 <div className="w-full h-full absolute top-0 left-0">
