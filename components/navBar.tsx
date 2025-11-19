@@ -5,11 +5,11 @@ export default function NavBar() {
     const contactUrl = siteConfig.general.contact_url;
     
     return (
-        <nav className="save-paddings  absolute top-0 left-0 w-full flex justify-between items-center ">
+        <nav className="save-paddings  absolute top-0 left-0 w-full flex justify-between items-center z-50">
             <Link href="/" className="duration-300 cursor-pointer">
                 <span className="text-md font-semibold font-mono">Valdeir Sapará</span>
             </Link>
-                <a href="#content" className=" left-0 top-8 text-sm font-sans sr-only focus:not-sr-only
+                <a href="#content" className=" left-50 top-8 text-sm font-sans sr-only focus:not-sr-only
                  focus:bg-white focus:text-black focus:absolute focus:p-[2px] focus:z-50"
                 >
                     Ir para conteúdo principal

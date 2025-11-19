@@ -22,6 +22,7 @@ body {
 }
 
 .container-lg {
-  max-width: 720px;
+  width: 100%;
   min-height: 100dvh;
+  flex: 1;
 }
