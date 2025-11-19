@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Alexandria } from "next/font/google";
-import "./globals.css";
+import "@/assets/css/globals.css";
 import NavBar from "@/components/navBar";
 
 const figtree = Figtree({
