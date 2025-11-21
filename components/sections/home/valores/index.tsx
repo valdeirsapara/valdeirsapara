@@ -4,12 +4,12 @@
 export default function Valores() {
     return (
         <section className="bg-foreground container-lg  flex flex-col save-paddings">
-            <div className="content py-24">
+            <div className="content py-16">
                 <h2 className="text-2xl font-bold text-background">
                     <span>Não precisa ser complicado.</span><br/>
                     <span>Trabalhe com a gente e veja a diferença:</span>
                 </h2>
-                <ul className="flex mt-12 justify-between items-start gap-8">
+                <ul className="flex flex-col md:flex-row mt-12 justify-between items-start gap-8">
                     <li>
                         <div className="flex flex-col gap-2">
                             <h3 className="flex gap-2">
