@@ -7,7 +7,7 @@ export default function NavBar() {
     return (
         <nav className="save-paddings  flex justify-between items-center z-50 max-w-[1728px] mx-auto px-4">
             <Link href="/" className="duration-300 cursor-pointer">
-                <span className="text-sm md:text-md font-semibold font-mono">Valdeir Sapará</span>
+                <span className="text-sm md:text-lg font-semibold font-mono">Valdeir Sapará</span>
             </Link>
                 <a href="#content" className=" left-50 top-8 text-sm font-sans sr-only focus:not-sr-only
                  focus:bg-white focus:text-black focus:absolute focus:p-[2px] focus:z-50"
@@ -32,7 +32,7 @@ export default function NavBar() {
             <Link href={contactUrl}>
                 <button className="border-2 border-foreground rounded-xl px-2 py-1 md:py-2 cursor-pointer hover:border-[#3A9DC2]
                 transition-colors duration-300 group flex item-center">
-                    <span className="font-mono group-hover:text-[#3A9DC2] transition-colors duration-300">fale conosco</span>
+                    <span className="font-mono group-hover:text-[#3A9DC2] transition-colors duration-300">Fale conosco</span>
                 </button>
             </Link>
         </nav>

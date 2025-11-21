@@ -1,6 +1,5 @@
 "use client";
 import { Fit, Layout, useRive } from "@rive-app/react-canvas";
-import { useState } from "react";
 
 export default function Canvas() {
     const { RiveComponent, rive } = useRive({
