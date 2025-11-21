@@ -1,5 +1,6 @@
 import Link from "next/link";
 import siteConfig from "@/site-config.json";
+import NavbarMobile from "./navbarMobile";
 
 export default function NavBar() {
     const contactUrl = siteConfig.general.contact_url;
@@ -29,12 +30,13 @@ export default function NavBar() {
                 </li>
             </ul>
 
-            <Link href={contactUrl}>
+            <Link href={contactUrl} className="hidden md:block">
                 <button className="border-2 border-foreground rounded-xl px-2 py-1 md:py-2 cursor-pointer hover:border-[#3A9DC2]
                 transition-colors duration-300 group flex item-center">
                     <span className="font-mono group-hover:text-[#3A9DC2] transition-colors duration-300">Fale conosco</span>
                 </button>
             </Link>
+            <NavbarMobile />
         </nav>
     )
 }
